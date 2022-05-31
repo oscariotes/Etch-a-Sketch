@@ -1,1 +1,1 @@
-# Etch-a-Sketch
+Browser version of sketchpad and Etch-A-Sketch. Implementation should be simple enough for beginners, who wanted to learn javascript.
