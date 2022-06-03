@@ -2,8 +2,6 @@ const container = document.querySelector(".container");
 let userInput;
 
 
-
-
 //creates div blocks
 function rowColumn(userInput) {
   rows = userInput;
@@ -14,37 +12,42 @@ function rowColumn(userInput) {
     let eachBox = document.createElement("div");
     eachBox.innerText = (i + 1);
     container.appendChild(eachBox).className = "box";
-  };
+ }
+}
+
+rowColumn(25);
+
+
+var mouseDown = false;
+document.body.onmousedown = function() {
+  mouseDown = true;
+};
+document.body.onmouseup = function() {
+  mouseDown = false;
 };
 
-rowColumn(6);
-
-let eachBox = document.querySelectorAll(".box");
-
-
+//basic grid block color function
 function color (){
+  let eachBox = document.querySelectorAll(".box");
   eachBox.forEach(box =>{
-    box.addEventListener("click", function(){
-      box.style.backgroundColor = "blue";
+    let mouseMovement =false;
+    box.addEventListener("mouseover", function(){
+      
     })
+    box.addEventListener("mousedown", function(){{
+       box.style.backgroundColor = "blue";
+    }
   })
+  box.addEventListener("mousemove", function(){{
+    if (mouseDown) {
+      box.style.backgroundColor = "blue";
+    }
+ }
+})
+ })
 }
- 
-  color();
 
-/*const boxes = document.querySelectorAll('.box');
-
-boxes.forEach(box => {
-  box.addEventListener('click', function handleClick(event) {
-    console.log('box clicked', event);
-
-    box.setAttribute('style', 'background-color: yellow;');
-  });
-});
+color();
 
 
-/*[...document.querySelectorAll(".round")].forEach((round) => {
-  round.addEventListener("click", function() {
-    round.style.backgroundColor = "blue";
-  })
-})*/
+
