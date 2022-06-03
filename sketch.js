@@ -15,7 +15,7 @@ function rowColumn(userInput) {
  }
 }
 
-rowColumn(25);
+rowColumn(32);
 
 
 var mouseDown = false;
@@ -30,20 +30,19 @@ document.body.onmouseup = function() {
 function color (){
   let eachBox = document.querySelectorAll(".box");
   eachBox.forEach(box =>{
-    let mouseMovement =false;
     box.addEventListener("mouseover", function(){
       
     })
     box.addEventListener("mousedown", function(){{
        box.style.backgroundColor = "blue";
     }
-  })
+   })
   box.addEventListener("mousemove", function(){{
     if (mouseDown) {
       box.style.backgroundColor = "blue";
     }
- }
-})
+  }
+   })
  })
 }
 
