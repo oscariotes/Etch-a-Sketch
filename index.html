@@ -9,16 +9,25 @@
 </head>
 <body>
     <div><h1>Etch-A-Sketch</h1></div>
+    <div class="warning"></div>
     <div class="mainContainer">
         <div class="sidePanel">
+            <canvas class="color-palette" width="284" height="155"></canvas>
             <ul>
-                <button><li>Number of Grids</li></button><li></li>
-                <button><li>Color</li></button><li></li>
-                <button><li>Random Color</li></button><li></li>
-                <button><li>Erase</li></button><li></li>
+                <div>
+                    <input type="color" id="pickAcolor" 
+                           Value="#423939">
+                    <label for="userInput">Choose Color</label>
+                </div>
+                <button class="button" id="gridCount" onclick="gridCount"><li>Number of Grids</li></button><li></li>
+                <button class="button" id="color"><li>Color</li></button><li></li>
+                <button class=" button" id="randomColor"><li>Random Color</li></button><li></li>
+                <button class="button" id="erase"><li>Erase</li></button><li></li>
             </ul>
         </div>
+        
         <div class="container"></div>
+        
     </div>
     
     
