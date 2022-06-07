@@ -29,7 +29,6 @@ rowColumn(defaultValue);
     let userInput = prompt("Type grid number. It should be less than a hundred.");
       if (userInput <= 100) {
         container.replaceChildren();
-        warning.replaceChildren();
         rowColumn(userInput);
         color();
       } if (userInput > 100) {
@@ -37,7 +36,6 @@ rowColumn(defaultValue);
         alert ("Grids exceeds a hundred. It should be 100 or less");
       }       
   }
-
 
 let newColor = "#a9a9a9";
 

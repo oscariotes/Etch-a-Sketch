@@ -9,25 +9,26 @@
 </head>
 <body>
     <div><h1>Etch-A-Sketch</h1></div>
-    <div class="warning"></div>
     <div class="mainContainer">
         <div class="sidePanel">
             <ul>
-                <div>
-                   <input type="color" id="pickAcolor" Value="#423939">
-                    <label for="userInput">Choose Color</label>
-                </div>
-                <button class="button" id="gridCount" onclick="gridCount"><li>Number of Grids</li></button>
+        
+                <button class="button"><li><input type="color" id="pickAcolor" Value="#423939" for="userInput"></li>Select color</button>
+                   
+                   
+               <!--   <label for="userInput">Choose Color</label> --> 
+            
+                <button class="button" id="gridCount" onclick="gridCount"><li>Change Grid</li></button>
                 <button class="button" id="dColor" Value="#a9a9a9"><li>Default Color</li></button>
                 <button class="button" id="randomColor"><li>Random Color</li></button>
-                <button class="button" id="erase" Value=#ffffff><li>Erase</li></button><li>
+                <button class="button" id="erase" value="#ffffff"><li>Erase Color</li></button>
             </ul>
         </div>
         
         <div class="container"></div>
         
     </div>
-    
+    <footer>This is the footer</footer>
     
 </body>
 <script src="sketch.js"> defer</script>
