@@ -1,1 +1,1 @@
-Browser version of sketchpad and Etch-A-Sketch. Implementation should be simple enough for beginners, who wanted to learn javascript.
+Browser version of sketchpad and Etch-A-Sketch. Implementation is simple enough for beginners, who wanted to learn javascript. Added basic UI, though not too fancy.

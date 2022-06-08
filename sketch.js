@@ -10,7 +10,7 @@ const mainContainer = document.querySelector("mainContainer")
 const container = document.querySelector(".container");
 const warning = document.querySelector(".warning");
 
-//creates div blocks
+//generate div blocks
 function rowColumn(userInput) {
   rows = userInput;
   cols = userInput;
@@ -37,6 +37,7 @@ rowColumn(defaultValue);
       }       
   }
 
+  // event listener for the buttons
 let newColor = "#a9a9a9";
 
 dColor.addEventListener("click", function(){
