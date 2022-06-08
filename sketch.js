@@ -19,67 +19,68 @@ function rowColumn(userInput) {
   for (let i = 0; i < (rows * cols); i++) {
     let eachBox = document.createElement("div");
     container.appendChild(eachBox).className = "box";
- }
+  }
 }
 
 rowColumn(defaultValue);
 
 //Change number of grid
-  document.getElementById("gridCount").onclick = function gridCount(){
-    let userInput = prompt("Type grid number. It should be less than a hundred.");
-      if (userInput <= 100) {
-        container.replaceChildren();
-        rowColumn(userInput);
-        color();
-      } if (userInput > 100) {
-        let para = document.createElement("p");
-        alert ("Grids exceeds a hundred. It should be 100 or less");
-      }       
+document.getElementById("gridCount").onclick = function gridCount() {
+  let userInput = prompt("Type grid number. It should be less than a hundred.");
+  if (userInput <= 100) {
+    container.replaceChildren();
+    rowColumn(userInput);
+    color();
+  } if (userInput > 100) {
+    let para = document.createElement("p");
+    alert("Grids exceeds a hundred. It should be 100 or less");
   }
+}
 
-  // event listener for the buttons
+// event listener for the buttons
 let newColor = "#a9a9a9";
 
-dColor.addEventListener("click", function(){
+dColor.addEventListener("click", function () {
   newColor = dColor.value;
-}, false)  
+}, false)
 
-erase.addEventListener("click", function(){
+erase.addEventListener("click", function () {
   newColor = erase.value;
 }, false)
 
-colorPick.addEventListener("input", function() {
+colorPick.addEventListener("input", function () {
   newColor = colorPick.value;
 }, false);
 
-randomColor.addEventListener("click", function(){
-  newColor = "#" + ((1<<24)*Math.random() | 0).toString(16);
+randomColor.addEventListener("click", function () {
+  newColor = "#" + ((1 << 24) * Math.random() | 0).toString(16);
 }, false)
 
 var mouseDown = false;
-document.body.onmousedown = function() {
-mouseDown = true;
+document.body.onmousedown = function () {
+  mouseDown = true;
 };
-document.body.onmouseup = function() {
-mouseDown = false;
+document.body.onmouseup = function () {
+  mouseDown = false;
 };
 
 //basic grid block color function
-function color (){
-  
+function color() {
+
   let eachBox = document.querySelectorAll(".box");
-  eachBox.forEach(box =>{
-    box.addEventListener("mouseover", function(){ 
+  eachBox.forEach(box => {
+    box.addEventListener("mouseover", function () {
     })
-    box.addEventListener("mousedown", function(){{    
-       box.style.backgroundColor = newColor;      
-    }
-   })
-  box.addEventListener("mousemove", function(){
-    if (mouseDown) {
-    box.style.backgroundColor = newColor; 
-  }
-   })
- })
+    box.addEventListener("mousedown", function () {
+      {
+        box.style.backgroundColor = newColor;
+      }
+    })
+    box.addEventListener("mousemove", function () {
+      if (mouseDown) {
+        box.style.backgroundColor = newColor;
+      }
+    })
+  })
 }
 color();

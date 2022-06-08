@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +8,38 @@
     <link rel="stylesheet" href="styles.css">
     <title>Etch-A-Sketch</title>
 </head>
+
 <body>
-    <header><h1>Etch-A-Sketch</h1></header>
+    <header>
+        <h1>Etch-A-Sketch</h1>
+    </header>
     <div class="mainContainer">
         <div class="sidePanel">
-            <ul>       
-                <button class="button"><li><input type="color" id="pickAcolor" Value="#9E0129" for="userInput"></li>Select color</button>
-                <button class="button" id="gridCount" onclick="gridCount"><li>Change Grid</li></button>
-                <button class="button" id="dColor" Value="#a9a9a9"><li>Default Color</li></button>
-                <button class="button" id="randomColor"><li>Random Color</li></button>
-                <button class="button" id="erase" value="#ffffff"><li>Erase Color</li></button>
+            <ul>
+                <button class="button">
+                    <li><input type="color" id="pickAcolor" Value="#9E0129" for="userInput"></li>Select color
+                </button>
+                <button class="button" id="gridCount" onclick="gridCount">
+                    <li>Change Grid</li>
+                </button>
+                <button class="button" id="dColor" Value="#a9a9a9">
+                    <li>Default Color</li>
+                </button>
+                <button class="button" id="randomColor">
+                    <li>Random Color</li>
+                </button>
+                <button class="button" id="erase" value="#ffffff">
+                    <li>Erase Color</li>
+                </button>
             </ul>
         </div>
-        
+
         <div class="container"></div>
-        
+
     </div>
     <footer>Etch a sketch by Oscariotes</footer>
-    
+
 </body>
 <script src="sketch.js"> defer</script>
+
 </html>
